@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#dfe5d2">
+  <meta name="description" content="Lista de compras que sabe o que tem na sua casa.">
+  <title>Despensa</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="preload" href="./fonts/shantell-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./styles.css?v=2">
+</head>
+<body>
+  <svg id="defs" width="0" height="0" aria-hidden="true" focusable="false"></svg>
+
+  <header class="topo">
+    <h1 id="titulo">Lista de compras</h1>
+    <div id="acoes-topo" class="acoes-topo"></div>
+  </header>
+
+  <main id="tela"></main>
+
+  <nav class="abas" aria-label="Seções">
+    <button data-aba="lista" class="ativa"><span data-ui="carrinho"></span><span>Lista</span></button>
+    <button data-aba="verificar"><span data-ui="cartas"></span><span>Verificar</span></button>
+    <button data-aba="casa"><span data-ui="casa"></span><span>Em casa</span></button>
+  </nav>
+
+  <div id="folha" class="folha" hidden></div>
+  <div id="aviso" class="aviso" role="status" aria-live="polite"></div>
+
+  <script src="./js/icones.js?v=2"></script>
+  <script src="./js/dados.js?v=2"></script>
+  <script src="./js/exportar.js?v=2"></script>
+  <script src="./js/app.js?v=2"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js'));
+    }
+  </script>
+</body>
+</html>
