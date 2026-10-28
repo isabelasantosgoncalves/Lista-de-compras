@@ -1,4 +1,4 @@
-// Ícones desenhados à mão: uma mancha de giz colorida, um pouco deslocada,
+// Ícones desenhados à mão: uma mancha de cor lisa, um pouco deslocada,
 // com o contorno em traço fino de caneta por cima (caixa de 64×64).
 
 const Icones = (() => {
@@ -108,7 +108,7 @@ const Icones = (() => {
     ['arroz|feijao|lentilha|grao|farinha|acucar|aveia|fuba|milho', 'arroz'],
     ['carne|bife|frango|linguica|bacon|costela|file|patinho|alcatra|salsicha|hamburguer', 'carne'],
     ['queijo|presunto|mussarela|requeijao|manteiga|margarina|iogurte', 'queijo'],
-    ['cenoura|batata|mandioca|beterraba|abobora', 'cenoura'],
+    ['cenoura|batata|mandioca|aipim|beterraba|abobora', 'cenoura'],
     ['pao|bolo|biscoito|bolacha|torrada', 'pao'],
     ['detergente|sabao|amaciante|sanitaria|desinfetante|limpador|alvejante|multiuso|esponja|saco de lixo', 'limpeza'],
     ['papel|guardanapo|lenco', 'papel'],
@@ -123,9 +123,9 @@ const Icones = (() => {
     ['chocolate|doce|bala|chiclete|leite condensado', 'doce'],
     ['racao|areia|petisco', 'pata'],
     ['remedio|vitamina|curativo|dipirona', 'remedio'],
-    ['sal|tempero|pimenta|oregano|alho|cebola|caldo', 'tempero'],
+    ['alface|couve|repolho|rucula|espinafre|cheiro verde|coentro|cebolinha|salsa|brocolis|verdura', 'folha'],
+    ['sal|tempero|pimenta|oregano|alho|cebola|caldo|paprica|cominho|acafrao|louro|chimichurri', 'tempero'],
     ['sabonete|shampoo|condicionador|pasta de dente|escova|desodorante|absorvente|fio dental|creme', 'sabonete'],
-    ['alface|couve|rucula|espinafre|cheiro verde|salsinha|brocolis|verdura', 'folha'],
   ].map(([p, nome]) => [new RegExp(`\\b(${p})`), nome]);
 
   function semAcento(t) {
@@ -187,11 +187,8 @@ const Icones = (() => {
 
   const FILTROS = `<defs>
     <filter id="giz" filterUnits="userSpaceOnUse" x="-10" y="-10" width="84" height="84">
-      <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" seed="7" result="r"/>
-      <feColorMatrix in="r" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  3.2 0 0 0 -0.7" result="graos"/>
-      <feComposite in="SourceGraphic" in2="graos" operator="in" result="textura"/>
       <feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="2" seed="2" result="onda"/>
-      <feDisplacementMap in="textura" in2="onda" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+      <feDisplacementMap in="SourceGraphic" in2="onda" scale="4" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
     <filter id="traco" filterUnits="userSpaceOnUse" x="-10" y="-10" width="84" height="84">
       <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="4" result="onda"/>

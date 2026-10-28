@@ -82,7 +82,7 @@ button:disabled { cursor: default; opacity: .45; }
 svg.ui { width: 24px; height: 24px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 svg.ilustra { width: 48px; height: 48px; flex: none; overflow: visible; }
 svg.ilustra.mini { width: 38px; height: 38px; margin: -4px 0; }
-.giz { opacity: .92; }
+.giz { opacity: .85; }
 
 /* ---------- topo e abas ---------- */
 

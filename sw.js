@@ -1,18 +1,18 @@
 // Service Worker: guarda o app no aparelho para abrir sem internet.
 // Ao mudar qualquer arquivo, aumente a versão do CACHE.
 
-const CACHE = 'despensa-v2';
+const CACHE = 'despensa-v3';
 
 const SHELL = [
   './',
   './index.html',
-  './styles.css?v=2',
+  './styles.css?v=3',
   './manifest.json',
-  './js/icones.js?v=2',
-  './js/dados.js?v=2',
+  './js/icones.js?v=3',
+  './js/dados.js?v=3',
   './fonts/shantell-sans.woff2',
-  './js/exportar.js?v=2',
-  './js/app.js?v=2',
+  './js/exportar.js?v=3',
+  './js/app.js?v=3',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-maskable-512.png',
